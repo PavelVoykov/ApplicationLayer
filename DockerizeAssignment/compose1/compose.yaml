@@ -1,0 +1,9 @@
+services:
+  web:
+    build: ../dockerise-api
+    ports:
+      - "3000:3000"
+  redis:
+    image: "mysql"
+    ports:
+      - "3306:3306"
