@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS 
+import flask_cors
 import mysql.connector
 from mysql.connector import Error
 
@@ -8,7 +9,7 @@ app = Flask(__name__)
 CORS(app)
 
 # MySQL connection details
-host = "mysql-server"  # Docker container name or MySQL host
+host = "127.0.0.1"  # Docker container name or MySQL host
 user = "root"
 password = "my-secret-pw"
 database = "messaging_app"
